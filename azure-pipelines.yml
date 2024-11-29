@@ -9,7 +9,9 @@ trigger:
 pool:myagent
 
 
-
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
